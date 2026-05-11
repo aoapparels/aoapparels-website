@@ -106,12 +106,27 @@ nav ul{
 }
 
 nav ul li a{
+
   color: white;
+
   text-decoration: none;
+
   font-weight: bold;
+
   font-size: 13px;
-  transition: 0.3s;
+
   white-space: nowrap;
+
+  padding: 10px 16px;
+
+  border-radius: 10px;
+
+  display: inline-block;
+
+  transition: 0.3s;
+
+  animation: navGlow 2s infinite;
+}
 }
 
 nav ul li a:hover{
@@ -575,4 +590,279 @@ footer{
     box-shadow: 0 0 8px rgba(249,115,22,0.25);
   }
 
+}
+.about-section{
+  background: linear-gradient(135deg, #1f2937, #312e81, #4c1d95);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-glass{
+  max-width: 1000px;
+  margin: auto;
+  padding: 45px;
+  border-radius: 24px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  box-shadow:
+    0 0 25px rgba(168,85,247,0.45),
+    inset 0 0 20px rgba(255,255,255,0.05);
+
+  animation: aboutGlow 2.5s infinite alternate;
+}
+
+.about-glass h2{
+  color: #e9d5ff;
+  font-size: 42px;
+  margin-bottom: 25px;
+  text-shadow: 0 0 18px rgba(168,85,247,0.9);
+}
+
+.about-glass p{
+  color: #f3e8ff;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+@keyframes aboutGlow{
+  from{
+    box-shadow:
+      0 0 18px rgba(168,85,247,0.35),
+      inset 0 0 15px rgba(255,255,255,0.04);
+  }
+
+  to{
+    box-shadow:
+      0 0 45px rgba(168,85,247,0.85),
+      inset 0 0 25px rgba(255,255,255,0.08);
+  }
+}
+.factory-overview{
+
+  background:
+  linear-gradient(
+    135deg,
+    #111827,
+    #3b1d14,
+    #4c1d95
+  );
+}
+
+.overview-grid{
+
+  display: grid;
+
+  grid-template-columns: repeat(4,1fr);
+
+  gap: 24px;
+
+  margin-top: 45px;
+}
+
+.overview-card{
+
+  background: rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  border-radius: 24px;
+
+  padding: 38px 20px;
+
+  transition: 0.4s;
+
+  box-shadow:
+    0 0 18px rgba(168,85,247,0.22),
+    0 0 22px rgba(249,115,22,0.15);
+}
+
+.overview-card:hover{
+
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 0 35px rgba(168,85,247,0.55),
+    0 0 50px rgba(249,115,22,0.35);
+}
+
+.why-card h3{
+
+  color: #fb923c;
+
+  font-size: 30px;
+
+  margin-top: 18px;
+
+  margin-bottom: 18px;
+
+  text-shadow:
+    0 0 10px rgba(249,115,22,0.55);
+}
+
+.overview-card p{
+
+  color: #f5e9dd;
+
+  font-size: 18px;
+
+  font-weight: 600;
+}
+
+@media(max-width:900px){
+
+  .overview-grid{
+    grid-template-columns: 1fr;
+  }
+
+}
+.why-card img{
+
+  width: 100%;
+
+  height: auto;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  margin-bottom: 22px;
+
+  transition: 0.4s;
+
+  box-shadow:
+    0 0 18px rgba(249,115,22,0.22);
+}
+
+.why-card:hover img{
+
+  transform: scale(1.04);
+
+  box-shadow:
+    0 0 30px rgba(168,85,247,0.35),
+    0 0 45px rgba(249,115,22,0.22);
+}
+.section{
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.section{
+
+  position: relative;
+
+  overflow: hidden;
+
+  border: 2px solid transparent;
+
+  animation: sectionGlow 4s linear infinite;
+}
+
+@keyframes sectionGlow{
+
+  0%{
+    box-shadow: 0 0 15px #f97316;
+    border-color: #f97316;
+  }
+
+  25%{
+    box-shadow: 0 0 20px #a855f7;
+    border-color: #a855f7;
+  }
+
+  50%{
+    box-shadow: 0 0 20px #06b6d4;
+    border-color: #06b6d4;
+  }
+
+  75%{
+    box-shadow: 0 0 20px #22c55e;
+    border-color: #22c55e;
+  }
+
+  100%{
+    box-shadow: 0 0 15px #f97316;
+    border-color: #f97316;
+  }
+}
+@keyframes borderGlow{
+
+  0%{
+    background-position: 0% 50%;
+  }
+
+  50%{
+    background-position: 100% 50%;
+  }
+
+  100%{
+    background-position: 0% 50%;
+  }
+}
+.section{
+
+  margin: 18px;
+
+  border-radius: 20px;
+}
+nav ul li:nth-child(1) a{
+  
+  box-shadow: 0 0 15px rgba(168,85,247,0.7);
+}
+
+nav ul li:nth-child(2) a{
+  b
+  box-shadow: 0 0 15px rgba(168,85,247,0.7);
+}
+
+nav ul li:nth-child(3) a{
+  
+  box-shadow: 0 0 15px rgba(6, 181, 212, 0);
+}
+
+nav ul li:nth-child(4) a{
+  
+  box-shadow: 0 0 15px rgba(8, 46, 21, 0.7);
+}
+
+nav ul li:nth-child(5) a{
+
+  box-shadow: 0 0 15px rgba(225,29,72,0.7);
+}
+
+nav ul li:nth-child(6) a{
+  
+  box-shadow: 0 0 15px rgba(245,158,11,0.7);
+}
+
+nav ul li:nth-child(7) a{
+ 
+  box-shadow: 0 0 15px rgba(139,92,246,0.7);
+}
+
+nav ul li:nth-child(8) a{
+  
+  box-shadow: 0 0 15px rgba(14,165,233,0.7);
+}
+@keyframes navGlow{
+
+  0%{
+    transform: scale(1);
+  }
+
+  50%{
+    transform: scale(1.05);
+  }
+
+  100%{
+    transform: scale(1);
+  }
 }
